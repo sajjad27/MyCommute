@@ -23,7 +23,7 @@
         @apply text-lg block text-gray-700 mb-1.5 w-full;
     }
     .input  {
-        @apply rounded h-12 w-full p-1 text-gray-700 bg-background ring-1 border-none text-sm;
+        @apply rounded h-12 w-full p-1 pl-3 text-gray-700 bg-background ring-1 ring-primary border-none text-sm;
     }
     .ng-select.custom ::ng-deep .ng-select-container  {
         @apply rounded w-full p-1 text-gray-700 bg-background ring-1 border-none text-sm;

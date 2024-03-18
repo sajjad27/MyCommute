@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth-service';
+import { BlockUiService } from 'src/app/services/block-ui.service';
 import { FormHelper } from 'src/app/services/form-helper';
 
 @Component({
@@ -12,7 +13,6 @@ import { FormHelper } from 'src/app/services/form-helper';
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
-  // @ViewChild('username') 
   globalErrorMessages: string[] = [];
 
   @ViewChild('f', { static: false }) signUpForm!: NgForm;
@@ -22,10 +22,13 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   loginSubscribtion: Subscription | undefined;
 
-  constructor(private authService: AuthService, private router: Router, private formHelper: FormHelper) { }
+  constructor(private authService: AuthService,
+    private router: Router,
+    private formHelper: FormHelper,
+    private blockUiService: BlockUiService) { }
 
   ngOnInit(): void {
-   
+
     console.log(`this.isLoading`, this.isLoading);
   }
 
@@ -44,6 +47,13 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.formHelper.markAllAsTouched(this.signUpForm.form);
       return;
     }
+    this.blockUiService.block()
+    setTimeout(() => {
+      this.blockUiService.unblock();
+      this.router.navigate(['dashbord']);
+    }, 2500);
+
+
   }
 }
 

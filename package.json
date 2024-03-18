@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --prod && ngh --dir=dist/MyCommute"
+    "deploy": "ng build && ngh --dir=dist/MyCommute"
   },
   "private": true,
   "dependencies": {

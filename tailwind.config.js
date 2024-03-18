@@ -12,12 +12,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': "#1B282E",
-        'secondary': "#262433",
-        'background': "#DDE7EB",
-        'dark-background': "#0f2129",
-        'pr-font': "#1B282E",
-        'tbl-font': "#3C3E40",
+        'primary': "#1B2E2A",
+        'background': "#DDEBEA",
+        'border': "##B0CFC6",
       },
       screens: {
         'xs': { 'min': '0px', 'max': '767px' },
