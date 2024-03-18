@@ -2,9 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+
 @layer base {
     body {
-        @apply bg-background font-poppins;
+        @apply bg-background font-main font-thin;
     }
     app-input-field {
         @apply w-full mb-3 h-9	;
@@ -18,31 +19,26 @@
     .logo {
         @apply text-center text-primary text-4xl font-bold pb-2 font-ubuntu;
     }
-    .under-logo {
-        @apply text-primary w-8;
-        border: 2px solid;
-        border-radius: 5px;
-    }
     .label {
-        @apply text-sm block text-gray-700 font-medium mb-1.5 w-full;
+        @apply text-lg block text-gray-700 mb-1.5 w-full;
     }
     .input  {
-        @apply rounded w-full p-1 text-gray-700 bg-background ring-1  border-none text-sm;
+        @apply rounded h-12 w-full p-1 text-gray-700 bg-background ring-1 border-none text-sm;
     }
     .ng-select.custom ::ng-deep .ng-select-container  {
-        @apply rounded w-full p-1 text-gray-700 bg-background ring-1  border-none text-sm;
+        @apply rounded w-full p-1 text-gray-700 bg-background ring-1 border-none text-sm;
     }
     .input:focus {
         @apply outline-none;
     }
     .primary-btn {
-        @apply bg-primary text-white font-medium p-1 rounded;
+        @apply bg-primary h-12 text-white p-1 rounded;
     }
     .primary-btn:hover {
         @apply bg-primary outline-none;
     }
     .local-error {
-        @apply text-red-500 text-xs italic;
+        @apply text-red-500 text-sm py-1;
     }
     .global-error {
         @apply rounded ring-1 text-red-700 ring-red-300 bg-red-100 p-2.5 w-full text-sm mt-2;
@@ -51,7 +47,7 @@
         @apply ring-red-500;
     }
     .form-container {
-        @apply flex flex-col items-center justify-end gap-4;
+        @apply flex flex-col items-center justify-end gap-14;
     }
     .side-menu {
         @apply border-r bg-white flex flex-col justify-between text-gray-500;

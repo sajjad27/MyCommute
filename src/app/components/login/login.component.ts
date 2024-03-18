@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth-service';
+import { FormHelper } from 'src/app/services/form-helper';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   loginSubscribtion: Subscription | undefined;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, private formHelper: FormHelper) { }
 
   ngOnInit(): void {
    
@@ -39,7 +40,10 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   signIn() {
-    
+    if (this.signUpForm.invalid) {
+      this.formHelper.markAllAsTouched(this.signUpForm.form);
+      return;
+    }
   }
 }
 

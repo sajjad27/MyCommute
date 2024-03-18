@@ -12,11 +12,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': "#9A8266",
+        'primary': "#1B282E",
         'secondary': "#262433",
         'background': "#DDE7EB",
         'dark-background': "#0f2129",
-        'pr-font': "#9A8266",
+        'pr-font': "#1B282E",
         'tbl-font': "#3C3E40",
       },
       screens: {
@@ -36,7 +36,7 @@ module.exports = {
         // => @media (min-width: 1536px) { ... }
       },
       fontFamily: {
-        poppins: ['Poppins'],
+        main: ['Roboto'],
         ubuntu: ['Ubuntu']
       },
     },

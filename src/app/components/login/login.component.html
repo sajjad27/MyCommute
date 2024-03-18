@@ -1,26 +1,25 @@
-<div class="center-x-y">
-    <div class="card ring-1 rounded-3xl max-w-2xl min-w-fit px-10 w-1/4" style="min-width: 300px;">
+<div id="login-background" class="center-x-y bg-primary">
+    <div class="card ring-1 rounded-3xl max-w-md min-w-fit px-10 w-1/4 sm:w-9/12 w-11/12" style="min-width: 300px;">
         <div>
-            <p class="logo">MyCommute</p>
-            <hr class="under-logo">
+            <img src="assets/Logo.png" height="250px" width="250px" alt="MyCommute">
         </div>
-        <form #f="ngForm" (keydown)="signInWithEnter($event)">
-            <div class="form-container">
-                <app-input-field label="Username" placeholder="Username" 
-                    [messages]="{'required': 'Username is required'}" required name="username" #username="ngModel"
+        <div class="form-container " style="min-width: 300px;">
+            <form #f="ngForm" (keydown)="signInWithEnter($event)">
+                <app-input-field label="Network ID" placeholder="networkId"
+                    [messages]="{'required': 'Network ID is required'}" required name="networkId" #networkId="ngModel"
                     ngModel>
                 </app-input-field>
-                <app-input-field [type]="'password'" label="Password" placeholder="Password" required
-                    name="password" #password="ngModel" ngModel [messages]="{'required': 'Password is required'}">
+                <app-input-field [type]="'password'" label="Password" placeholder="Password" required name="password"
+                    #password="ngModel" ngModel [messages]="{'required': 'Password is required'}">
                 </app-input-field>
-            </div>
-            <div>
-                <app-global-error [messages]="globalErrorMessages"></app-global-error>
-            </div>
+                <div>
+                    <app-global-error [messages]="globalErrorMessages"></app-global-error>
+                </div>
+            </form>
 
-        </form>
-        <app-button [label]="'Sign In'" (click)="signIn()" class="w-full" [isLoading]="isLoading">
-        </app-button>
+            <app-button [label]="'Sign In'" (click)="signIn()" class="w-full" [isLoading]="isLoading">
+            </app-button>
+        </div>
     </div>
     <p class="text-center text-gray-500 text-xs">
         &copy;2024 Saudi Aramco All rights reserved.

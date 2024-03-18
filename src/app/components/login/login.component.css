@@ -1,0 +1,6 @@
+#login-background {
+    background-image: url("../../../assets/backgroud-4.webp"); /* The path to your image file */
+    background-size: cover; /* Ensures the background covers the entire page */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
