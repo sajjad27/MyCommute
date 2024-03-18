@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/services/auth-service';
 export class LoginComponent implements OnInit, OnDestroy {
 
   // @ViewChild('username') 
-  globalErrorMessages: string[] = [""];
+  globalErrorMessages: string[] = [];
 
   @ViewChild('f', { static: false }) signUpForm!: NgForm;
 

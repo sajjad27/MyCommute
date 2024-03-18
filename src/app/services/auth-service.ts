@@ -9,13 +9,14 @@ import { Router } from '@angular/router';
 export class AuthService {
 
 
-  private tokenExpirationTimer: any;
-
-
   constructor(private http: HttpClient, private router: Router) { }
 
   logIn(username: string, password: string) {
     
+  }
+
+  isLoggedIn() {
+    return false;
   }
 
   

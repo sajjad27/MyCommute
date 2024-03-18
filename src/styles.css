@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+    body {
+        @apply bg-background font-poppins;
+    }
+    app-input-field {
+        @apply w-full mb-3 h-9	;
+    }
+    .center-x-y {
+        @apply flex flex-col items-center justify-evenly align-middle w-full h-screen;
+    }
+    .card {
+        @apply h-5/6 bg-white flex flex-col items-center justify-around align-middle p-4 rounded-lg  shadow-md;
+    }
+    .logo {
+        @apply text-center text-primary text-4xl font-bold pb-2 font-ubuntu;
+    }
+    .under-logo {
+        @apply text-primary w-8;
+        border: 2px solid;
+        border-radius: 5px;
+    }
+    .label {
+        @apply text-sm block text-gray-700 font-medium mb-1.5 w-full;
+    }
+    .input  {
+        @apply rounded w-full p-1 text-gray-700 bg-background ring-1  border-none text-sm;
+    }
+    .ng-select.custom ::ng-deep .ng-select-container  {
+        @apply rounded w-full p-1 text-gray-700 bg-background ring-1  border-none text-sm;
+    }
+    .input:focus {
+        @apply outline-none;
+    }
+    .primary-btn {
+        @apply bg-primary text-white font-medium p-1 rounded;
+    }
+    .primary-btn:hover {
+        @apply bg-primary outline-none;
+    }
+    .local-error {
+        @apply text-red-500 text-xs italic;
+    }
+    .global-error {
+        @apply rounded ring-1 text-red-700 ring-red-300 bg-red-100 p-2.5 w-full text-sm mt-2;
+    }
+    .error-input {
+        @apply ring-red-500;
+    }
+    .form-container {
+        @apply flex flex-col items-center justify-end gap-4;
+    }
+    .side-menu {
+        @apply border-r bg-white flex flex-col justify-between text-gray-500;
+    }
+    .menu-link {
+        @apply hover:text-black transition duration-200 ease-linear pl-3 text-sm flex items-center py-2 mb-2 hover:bg-gray-100 hover:text-gray-700 transition duration-200 ease-in;
+    }
+    .active {
+        @apply border-l-4 border-primary bg-background;
+    }
+
+    form {
+        @apply w-full;
+    }
+
+    .required:after {
+        content: " *";
+        color: red;
+    }
+    
+}
