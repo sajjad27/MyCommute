@@ -1,0 +1,28 @@
+<div class="center-x-y">
+    <div class="card ring-1 rounded-3xl max-w-2xl min-w-fit px-10 w-1/4" style="min-width: 300px;">
+        <div>
+            <p class="logo">Denty</p>
+            <hr class="under-logo">
+        </div>
+        <form #f="ngForm" (keydown)="signInWithEnter($event)">
+            <div class="form-container">
+                <app-input-field label="Username" placeholder="Username" 
+                    [messages]="{'required': 'Username is required'}" required name="username" #username="ngModel"
+                    ngModel>
+                </app-input-field>
+                <app-input-field [type]="'password'" label="Password" placeholder="Password" required
+                    name="password" #password="ngModel" ngModel [messages]="{'required': 'Password is required'}">
+                </app-input-field>
+            </div>
+            <div>
+                <app-global-error [messages]="globalErrorMessages"></app-global-error>
+            </div>
+
+        </form>
+        <app-button [label]="'Sign In'" (click)="signIn()" class="w-full" [isLoading]="isLoading">
+        </app-button>
+    </div>
+    <p class="text-center text-gray-500 text-xs">
+        &copy;2024 Saudi Aramco All rights reserved.
+    </p>
+</div>
