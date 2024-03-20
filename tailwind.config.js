@@ -12,16 +12,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': "#1DAC90",
-        'dark': "#0f594b",
+        'primary': "#0f594b",
+        // 'dark': "#1DAC90",
         'background': "#f4fffd",
         'border': "#ced9d8",
       },
       screens: {
-        'xs': { 'min': '0px', 'max': '767px' },
+        'xs': { 'min': '0px', 'max': '600px' },
         // => @media (min-width: 640px and max-width: 767px) { ... }
 
-        'sm': { 'min': '768px', 'max': '1023px' },
+        'sm': { 'min': '601px', 'max': '1023px' },
         // => @media (min-width: 768px and max-width: 1023px) { ... }
 
         'md': { 'min': '1024px', 'max': '1279px' },

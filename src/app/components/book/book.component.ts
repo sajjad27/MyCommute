@@ -52,7 +52,7 @@ export class BookComponent {
 
   options = [
     { label: 'Bus', icon: 'directions_bus', selected: false },
-    { label: 'Train', icon: 'train', selected: false },
+    { label: 'Train', icon: 'directions_railway', selected: false },
     { label: 'Taxi', icon: 'local_taxi', selected: false },
     { label: 'Airplane', icon: 'airplanemode_active', selected: false },
   ];

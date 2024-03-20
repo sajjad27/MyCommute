@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-trip-card',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./trip-card.component.css']
 })
 export class TripCardComponent {
+
+  @Input() time: string | null = null;
+  @Input() location: string | null = null;
+  @Input() status: string | null = null;
 
 }

@@ -1,26 +1,41 @@
-<div class="content-container">
+<!-- <div class="content-container">
     <div class=" flex flex-col justify-center xl:w-[60%] lg:w-[60%] md:w-[60%] sm:w-[80%] xs:w-[80%]">
         <app-input-field placeholder="Search .." name="search">
         </app-input-field>
         <P class="text-xl font-bold	pt-4">My Activity</P>
         <div>
             <mat-chip-listbox aria-label="activity selection">
-                <mat-chip-option selected>All</mat-chip-option>
-                <mat-chip-option>Confirmed</mat-chip-option>
-                <mat-chip-option>Pending</mat-chip-option>
-                <mat-chip-option>Cancelled</mat-chip-option>
+                <mat-chip-option color="accent" selected>All</mat-chip-option>
+                <mat-chip-option color="accent">Confirmed</mat-chip-option>
+                <mat-chip-option color="accent">Pending</mat-chip-option>
+                <mat-chip-option color="accent">Cancelled</mat-chip-option>
             </mat-chip-listbox>
         </div>
 
         <div class="flex flex-wrap w-full gap-2 justify-between">
-            <app-trip-card></app-trip-card>
-            <app-trip-card></app-trip-card>
-            <app-trip-card></app-trip-card>
-            <app-trip-card></app-trip-card>
-            <app-trip-card></app-trip-card>
-            <app-trip-card></app-trip-card>
-            <app-trip-card></app-trip-card>
-            <app-trip-card></app-trip-card>
+            <app-trip-card *ngFor="let request of requests" [time]="request.time" [location]="request.building"
+                [status]="request.status"></app-trip-card>
+
         </div>
     </div>
-</div>
+</div> -->
+
+
+<div class="content-container">
+    <div class="flex flex-col justify-center xl:w-[60%] lg:w-[60%] md:w-[60%] sm:w-[80%] xs:w-[80%]">
+      <app-input-field placeholder="Search .." name="search"></app-input-field>
+      <p class="text-xl font-bold pt-4">My Activity</p>
+      <mat-chip-listbox aria-label="activity selection" (change)="applyFilter($event)">
+        <mat-chip-option color="accent" [selected]="selectedStatus === 'All'">All</mat-chip-option>
+        <mat-chip-option color="accent" [selected]="selectedStatus === 'Confirmed'">Confirmed</mat-chip-option>
+        <mat-chip-option color="accent" [selected]="selectedStatus === 'Pending'">Pending</mat-chip-option>
+        <mat-chip-option color="accent" [selected]="selectedStatus === 'Cancelled'">Cancelled</mat-chip-option>
+      </mat-chip-listbox>
+  
+      <div class="flex flex-wrap w-full gap-2 justify-between">
+        <app-trip-card *ngFor="let request of filteredRequests" [time]="request.time" [location]="request.building" [status]="request.status"></app-trip-card>
+      </div>
+    </div>
+  </div>
+  
+  

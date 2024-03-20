@@ -1,13 +1,15 @@
 <div class="w-full h-full border-2 rounded border-border flex flex-row justify-between text-smaller py-1.5 pr-1 pl-2">
     <div class="flex flex-col justify-between ">
-        <p class="font-bold">Dahran 43434, bldg 1451</p>
-        <p>Mar 23 8:50 pm</p>
+        <p class="font-bold">{{location}}</p>
+        <p class="text-gray-400">{{time}}</p>
     </div>
     <div class="flex flex-col justify-between">
-        <p class="self-center">Confirmed</p>
+        <p class="self-center"
+            [ngClass]="{ 'text-green-500': status === 'Confirmed', 'text-red-500': status === 'Cancelled', 'text-yellow-500': status === 'Pending' }">
+            {{status}}</p>
         <div class="flex">
-            <p>Trip details </p>
-            <mat-icon fontIcon="arrow_right_alt">arrow_right_alt</mat-icon>
+            <p class="text-gray-400">Trip details </p>
+            <mat-icon class="text-gray-400" fontIcon="arrow_right_alt">arrow_right_alt</mat-icon>
         </div>
     </div>
 </div>

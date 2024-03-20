@@ -19,7 +19,7 @@ $mat-primary: (
   300: #c0bbb3,
   400: #1DAC90,
   // primary here
-  500: #1DAC90,
+  500: #0f594b,
   600: #807666,
   700: #6b5f4d,
   800: #564933,
@@ -52,11 +52,11 @@ $mat-accent: (
   300: #c0bbb3,
   400: #aba499,
   // accent here
-  500: #0f594b,
+  500: #1DAC90,
   600: #807666,
   700: #6b5f4d,
   800: #564933,
-  A200: #455a64,
+  A200: #0f594b,
   A100: #cfd8dc,
   A700: #455a64,
   A400: #78909c,
@@ -80,7 +80,7 @@ $mat-accent: (
 
 
 $MyCommute-primary: mat.define-palette($mat-primary);
-$MyCommute-accent: mat.define-palette($mat-primary, A200, A100, A400);
+$MyCommute-accent: mat.define-palette($mat-accent, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $MyCommute-warn: mat.define-palette(mat.$red-palette);

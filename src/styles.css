@@ -87,11 +87,11 @@
     }
 
     .selectable-chip.selected {
-        @apply text-white bg-dark;
+        @apply text-white bg-primary;
     }
 
     .content-container {
-        @apply flex flex-row justify-center items-center w-full h-full sm:pt-0 xs:pt-0 py-16;
+        @apply flex flex-row justify-center items-center w-full h-full xs:pt-0 py-16;
     }
 
     /* .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__text-label {
