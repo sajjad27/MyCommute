@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.blockUiService.block()
     setTimeout(() => {
       this.blockUiService.unblock();
-      this.router.navigate(['dashbord']);
+      this.router.navigate(['logged/home']);
     }, 2500);
 
 

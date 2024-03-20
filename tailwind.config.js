@@ -14,7 +14,7 @@ module.exports = {
       colors: {
         'primary': "#1B2E2A",
         'background': "#DDEBEA",
-        'border': "##B0CFC6",
+        'border': "#B0CFC6",
       },
       screens: {
         'xs': { 'min': '0px', 'max': '767px' },

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { ScreenService } from './services/screen-service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor() {}
-  
+
+  constructor(private screenService: ScreenService) {
+  }
+
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.screenService.dispatchNewScreenSize(window.innerWidth)
+  }
+
+
+
+  ngOnInit(): void {
+    this.screenService.dispatchNewScreenSize(window.innerWidth)
+
+  }
+
 }

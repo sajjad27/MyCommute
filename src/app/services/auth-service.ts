@@ -16,7 +16,11 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    return false;
+    return true;
+  }
+
+  logout(){
+    
   }
 
   

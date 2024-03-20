@@ -5,7 +5,7 @@
         </div>
         <div class="form-container " style="min-width: 300px;">
             <form #f="ngForm" (keydown)="signInWithEnter($event)">
-                <app-input-field label="Network ID" placeholder="networkId"
+                <app-input-field label="Network ID" placeholder="Network ID"
                     [messages]="{'required': 'Network ID is required'}" required name="networkId" #networkId="ngModel"
                     ngModel>
                 </app-input-field>
