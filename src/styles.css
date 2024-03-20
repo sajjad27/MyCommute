@@ -74,11 +74,29 @@
         content: " *";
         color: red;
     }
-
-    mat-drawer-content {
+    h mat-drawer-content {
         @apply bg-background;
     }
 
+    app-trip-card {
+        @apply h-20 w-[49%] xs:w-[100%] sm:w-[100%] md:w-[100%];
+    }
+
+    .selectable-chip {
+        @apply h-40 flex items-center w-[48%] p-3 rounded cursor-pointer bg-white border-border border-2;
+    }
+
+    .selectable-chip.selected {
+        @apply text-white bg-primary;
+    }
+
+    .content-container {
+        @apply flex flex-row justify-center items-center w-full h-full sm:pt-0 xs:pt-0 py-16;
+    }
+
+    /* .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__text-label {
+        @apply xs:text-sm text-red-500;
+    } */
 }
 
 html,

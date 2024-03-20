@@ -21,6 +21,17 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { ContentComponent } from './components/content/content.component';
 import { BottomBarComponent } from './components/bottom-bar/bottom-bar.component';
+import { TripCardComponent } from './components/shared/trip-card/trip-card.component';
+import { BookComponent } from './components/book/book.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MobileHeaderComponent } from './components/mobile-header/mobile-header.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -35,6 +46,9 @@ import { BottomBarComponent } from './components/bottom-bar/bottom-bar.component
     SidebarComponent,
     ContentComponent,
     BottomBarComponent,
+    TripCardComponent,
+    BookComponent,
+    MobileHeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,10 +57,19 @@ import { BottomBarComponent } from './components/bottom-bar/bottom-bar.component
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
+    MatInputModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MatIconModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTabsModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule,
+    MatFormFieldModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

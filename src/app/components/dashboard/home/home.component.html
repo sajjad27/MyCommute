@@ -1,4 +1,4 @@
-<div class="flex flex-row justify-center items-center pt-28 w-full h-full">
+<div class="content-container">
     <div class=" flex flex-col justify-center xl:w-[60%] lg:w-[60%] md:w-[60%] sm:w-[80%] xs:w-[80%]">
         <app-input-field placeholder="Search .." name="search">
         </app-input-field>
@@ -11,8 +11,16 @@
                 <mat-chip-option>Cancelled</mat-chip-option>
             </mat-chip-listbox>
         </div>
-        <div>
-            
+
+        <div class="flex flex-wrap w-full gap-2 justify-between">
+            <app-trip-card></app-trip-card>
+            <app-trip-card></app-trip-card>
+            <app-trip-card></app-trip-card>
+            <app-trip-card></app-trip-card>
+            <app-trip-card></app-trip-card>
+            <app-trip-card></app-trip-card>
+            <app-trip-card></app-trip-card>
+            <app-trip-card></app-trip-card>
         </div>
     </div>
 </div>

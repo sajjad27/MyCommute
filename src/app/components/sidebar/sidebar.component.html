@@ -1,27 +1,30 @@
 <div class="side-menu">
-  <header class="upper-section flex flex-col justify-center items-center h-24 mt-4 mb-6 border-b border-gray-500">
+  <header class="upper-section flex flex-col justify-center items-center h-24 mt-4 mb-6">
     <!-- <img src="assets/Logo.png" height="250" width="250" alt="MyCommute"> -->
     <p class="flex justify-center items-center gap text-base"> Network ID:
       {{getNetworkId()}}</p>
     <hr>
   </header>
   <div id="middle-section menu-link" class="mb-auto">
-    <div routerLinkActive="active" [routerLink]="['/logged/home']"
-      class="flex w-full pointer py-2 pl-2 cursor-pointer border border-border">
+    <div routerLinkActive="active" [routerLink]="['/logged/home']" class="flex w-full py-2 pl-2 cursor-pointer">
       <mat-icon fontIcon="home">Home</mat-icon>
       <div class="pl-3">Home</div>
     </div>
-    <div routerLinkActive="active" [routerLink]="['/logged/book']" class="flex w-full pointer py-2 pl-2 cursor-pointer">
+    <div routerLinkActive="active" [routerLink]="['/logged/book']" class="flex w-full py-2 pl-2 cursor-pointer">
       <mat-icon fontIcon="date_range">date_range</mat-icon>
       <div class="pl-3">Book</div>
     </div>
-    <div routerLinkActive="active" [routerLink]="['/logged/settings']" class="flex w-full pointer py-2 pl-2 cursor-pointer">
+    <div routerLinkActive="active" [routerLink]="['/logged/settings']" class="flex w-full py-2 pl-2 cursor-pointer">
       <mat-icon fontIcon="settings">settings</mat-icon>
       <div class="pl-3">Settings</div>
     </div>
-    <div routerLinkActive="active" [routerLink]="['/logged/profile']" class="flex w-full pointer py-2 pl-2 cursor-pointer">
+    <div routerLinkActive="active" [routerLink]="['/logged/profile']" class="flex w-full py-2 pl-2 cursor-pointer">
       <mat-icon fontIcon="person">person</mat-icon>
       <div class="pl-3">Profile</div>
+    </div>
+    <div routerLinkActive="active" [routerLink]="['/login']" class="flex w-full py-2 pl-2 cursor-pointer">
+      <mat-icon fontIcon="exit_to_app">Logout</mat-icon>
+      <div class="pl-3">Log Out</div>
     </div>
   </div>
 
