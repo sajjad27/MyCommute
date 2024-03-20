@@ -51,10 +51,10 @@ export class BookComponent {
   // }
 
   options = [
-    { label: 'Bus', icon: 'Bus', selected: false },
-    { label: 'Train', icon: 'Train', selected: false },
-    { label: 'Taxi', icon: 'Taxi', selected: false },
-    { label: 'Airplane', icon: 'Airplane', selected: false },
+    { label: 'Bus', icon: 'directions_bus', selected: false },
+    { label: 'Train', icon: 'train', selected: false },
+    { label: 'Taxi', icon: 'local_taxi', selected: false },
+    { label: 'Airplane', icon: 'airplanemode_active', selected: false },
   ];
 
   toggleSelection(option: any): void {

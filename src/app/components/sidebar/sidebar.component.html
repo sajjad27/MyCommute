@@ -1,9 +1,8 @@
 <div class="side-menu">
-  <header class="upper-section flex flex-col justify-center items-center h-24 mt-4 mb-6">
-    <!-- <img src="assets/Logo.png" height="250" width="250" alt="MyCommute"> -->
-    <p class="flex justify-center items-center gap text-base"> Network ID:
+  <header class="upper-section flex flex-col justify-center items-center h-full mb-6">
+    <img src="assets/Logo.png" height="100" width="100" alt="MyCommute">
+    <p class="flex justify-center items-center gap text-base font-bold"> Network ID:
       {{getNetworkId()}}</p>
-    <hr>
   </header>
   <div id="middle-section menu-link" class="mb-auto">
     <div routerLinkActive="active" [routerLink]="['/logged/home']" class="flex w-full py-2 pl-2 cursor-pointer">

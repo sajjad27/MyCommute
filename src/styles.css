@@ -83,11 +83,11 @@
     }
 
     .selectable-chip {
-        @apply h-40 flex items-center w-[48%] p-3 rounded cursor-pointer bg-white border-border border-2;
+        @apply h-40 flex w-[48%] p-3 rounded cursor-pointer bg-white ring-2 ring-border;
     }
 
     .selectable-chip.selected {
-        @apply text-white bg-primary;
+        @apply text-white bg-dark;
     }
 
     .content-container {

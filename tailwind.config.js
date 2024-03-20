@@ -13,8 +13,9 @@ module.exports = {
     extend: {
       colors: {
         'primary': "#1DAC90",
+        'dark': "#0f594b",
         'background': "#f4fffd",
-        'border': "#348078",
+        'border': "#ced9d8",
       },
       screens: {
         'xs': { 'min': '0px', 'max': '767px' },

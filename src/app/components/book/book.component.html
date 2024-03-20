@@ -3,7 +3,7 @@
         <mat-tab-group dynamicHeight>
             <mat-tab label="Round Trip">
                 <form #f="ngForm" class="pb-6">
-                    <div class="flex flex-col">
+                    <div class="flex flex-col gap-4">
                         <mat-radio-group aria-label="Select an option">
                             <mat-radio-button primary value="Personal">Personal</mat-radio-button>
                             <mat-radio-button primary value="Business">Business</mat-radio-button>
@@ -58,11 +58,14 @@
                                 </mat-form-field>
                             </div>
                         </div>
-                        <div class="flex flex-wrap w-full gap-2 justify-between">
+                        <div class="flex flex-wrap w-full gap-2 justify-evenly">
                             <div class="selectable-chip" *ngFor="let option of options"
                                 [class.selected]="option.selected" (click)="toggleSelection(option)">
-                                <mat-icon>{{ option.icon }}</mat-icon>
-                                <span>{{ option.label }}</span>
+                                <p class="font-bold">{{ option.label }}</p>
+                                <div class="w-full flex justify-center items-center self-center">
+                                    <mat-icon style="height: 100%!important; width: 100%!important;" class="text-center text-border 
+                                    text-[9rem] sm:text-[6rem] xs:text-[6rem] w-full h-full">{{ option.icon }}</mat-icon>
+                                </div>
                             </div>
                         </div>
 
