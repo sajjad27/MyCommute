@@ -7,14 +7,16 @@ import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {
-    // path: '', component: ContentComponent, canActivate: [AuthGuard], children: [
-      path: 'logged', component: ContentComponent, children: [
+    path: 'logged', component: ContentComponent, children: [
       { path: 'home', component: HomeComponent },
       { path: 'book', component: BookComponent },
-      { path: '**', redirectTo: '/home' }
+      { path: '**', redirectTo: '/logged/home' }
     ]
   },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', redirectTo: '/login' },
   { path: 'login', component: LoginComponent },
+
 ]
 
 @NgModule({
