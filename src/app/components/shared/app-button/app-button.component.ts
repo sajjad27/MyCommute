@@ -9,6 +9,7 @@ export class AppButtonComponent implements OnInit {
 
   @Input() label!: string;
   @Input() isLoading: boolean = false;
+  @Input() class: string = '';
   @Output() OnClick = new EventEmitter<any>();
   constructor() { }
 

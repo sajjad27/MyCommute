@@ -1,4 +1,4 @@
-<button (click)="emitEvent()" class="primary-btn w-full inline-flex items-center justify-center"
+<button [class]="class" (click)="emitEvent()" class="primary-btn w-full inline-flex items-center justify-center"
     [ngClass]="{'cursor-not-allowed': isLoading}" [disabled]="isLoading" type="submit">
     <p class="w-5" *ngIf="isLoading" >
         <svg  class="animate-spin h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="none"

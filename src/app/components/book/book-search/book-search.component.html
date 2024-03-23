@@ -1,0 +1,136 @@
+<div class="content-container">
+    <div class="content-form-container">
+        <mat-tab-group dynamicHeight>
+            <mat-tab label="Round Trip">
+                <form #f="ngForm" class="pb-6">
+                    <div class="flex flex-col gap-4 bg-white">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button primary value="Personal">Personal</mat-radio-button>
+                            <mat-radio-button primary value="Business">Business</mat-radio-button>
+                        </mat-radio-group>
+                        <div class="flex justify-between">
+                            <div class="w-[49%]">
+                                <p class="font-bold">From</p>
+                                <mat-form-field>
+                                    <mat-label>From</mat-label>
+                                    <mat-select [(ngModel)]="selectedSource" name="from">
+                                        <ng-container *ngFor="let food of sources">
+                                            <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+                                        </ng-container>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="w-[49%]">
+                                <p class="font-bold">To</p>
+                                <mat-form-field>
+                                    <mat-label>To</mat-label>
+                                    <mat-select [(ngModel)]="selectedDestination" name="to">
+                                        <ng-container *ngFor="let food of destinations">
+                                            <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+                                        </ng-container>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="w-[49%]">
+                                <p class="font-bold">Departure Date</p>
+                                <mat-form-field class="w-full">
+                                    <input required matInput [matDatepicker]="departureRoundTrip">
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matIconSuffix
+                                        [for]="departureRoundTrip"></mat-datepicker-toggle>
+                                    <mat-datepicker #departureRoundTrip></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                            <div class="w-[49%]">
+                                <p class="font-bold">Return Date</p>
+                                <mat-form-field class="w-full">
+                                    <input required matInput [matDatepicker]="returnDate">
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matIconSuffix
+                                        [for]="returnDate"></mat-datepicker-toggle>
+                                    <mat-datepicker #returnDate></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap w-full gap-2 justify-evenly">
+                            <div class="selectable-chip" *ngFor="let option of options"
+                                [class.selected]="option.selected" (click)="toggleSelection(option)">
+                                <p class="font-bold">{{ option.label }}</p>
+                                <div class="w-full flex justify-center items-center self-center">
+                                    <mat-icon style="height: 100%!important; width: 100%!important;" class="text-center text-border 
+                                    text-[9rem] sm:text-[6rem] xs:text-[6rem] w-full h-full">{{ option.icon
+                                        }}</mat-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <app-button [label]="'Search'" class="w-full pt-2" (click)="search()">
+                </app-button>
+            </mat-tab>
+            <mat-tab label="One Way">
+                <form #f="ngForm" class="pb-6">
+                    <div class="flex flex-col gap-4 bg-white">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button primary value="Personal">Personal</mat-radio-button>
+                            <mat-radio-button primary value="Business">Business</mat-radio-button>
+                        </mat-radio-group>
+                        <div class="flex justify-between">
+                            <div class="w-[49%]">
+                                <p class="font-bold">From</p>
+                                <mat-form-field>
+                                    <mat-label>From</mat-label>
+                                    <mat-select [(ngModel)]="selectedSource" name="from">
+                                        <ng-container *ngFor="let food of sources">
+                                            <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+                                        </ng-container>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="w-[49%]">
+                                <p class="font-bold">To</p>
+                                <mat-form-field>
+                                    <mat-label>To</mat-label>
+                                    <mat-select [(ngModel)]="selectedDestination" name="to">
+                                        <ng-container *ngFor="let food of destinations">
+                                            <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+                                        </ng-container>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="w-[49%]">
+                                <p class="font-bold">Departure Date</p>
+                                <mat-form-field class="w-full">
+                                    <input required matInput [matDatepicker]="departureSingleRound">
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matIconSuffix
+                                        [for]="departureSingleRound"></mat-datepicker-toggle>
+                                    <mat-datepicker #departureSingleRound></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap w-full gap-2 justify-evenly">
+                            <div class="selectable-chip" *ngFor="let option of options"
+                                [class.selected]="option.selected" (click)="toggleSelection(option)">
+                                <p class="font-bold">{{ option.label }}</p>
+                                <div class="w-full flex justify-center items-center self-center">
+                                    <mat-icon style="height: 100%!important; width: 100%!important;" class="text-center text-border 
+                                    text-[9rem] sm:text-[6rem] xs:text-[6rem] w-full h-full">{{ option.icon
+                                        }}</mat-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <app-button [label]="'Search'" class="w-full pt-2" (click)="search()">
+                </app-button>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

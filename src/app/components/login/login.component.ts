@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.formHelper.markAllAsTouched(this.signUpForm.form);
       return;
     }
-    this.blockUiService.block()
+    this.blockUiService.blockWithMessage("Signing In ...")
     setTimeout(() => {
       this.blockUiService.unblock();
       this.router.navigate(['logged/home']);

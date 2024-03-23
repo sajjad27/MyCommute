@@ -32,6 +32,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from "@angular/material/input";
+import { BookResultComponent } from './components/book/book-result/book-result.component';
+import { BookSearchComponent } from './components/book/book-search/book-search.component';
+import { BookCardComponent } from './components/book/book-result/book-card/book-card.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { MatInputModule } from "@angular/material/input";
     TripCardComponent,
     BookComponent,
     MobileHeaderComponent,
+    BookResultComponent,
+    BookSearchComponent,
+    BookCardComponent,
   ],
   imports: [
     BrowserModule,

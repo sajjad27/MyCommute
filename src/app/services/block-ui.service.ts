@@ -8,14 +8,18 @@ import { Subject } from 'rxjs';
 
 export class BlockUiService {
 
-  isBlocking = new Subject<boolean>();
+  isBlocking = new Subject<{isBlocking: boolean, loadingMessage?: string}>();
 
   block() {
-    this.isBlocking.next(true);
+    this.isBlocking.next({isBlocking: true, loadingMessage: "Loading"});
+  }
+
+  blockWithMessage(message: string) {
+    this.isBlocking.next({isBlocking: true, loadingMessage: message});
   }
 
   unblock(){
-    this.isBlocking.next(false)
+    this.isBlocking.next({isBlocking: false})
   }
 
 }

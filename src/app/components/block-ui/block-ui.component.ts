@@ -12,10 +12,12 @@ export class BlockUiComponent {
   
   constructor(private blockUiService: BlockUiService) { }
   isBlocking = false;
+  loadingMessage = "";
 
   ngOnInit(): void {
-    this.blockUiService.isBlocking.subscribe(isBlocking => {
-      this.isBlocking = isBlocking
+    this.blockUiService.isBlocking.subscribe(loadingObj => {
+      this.isBlocking = loadingObj.isBlocking
+      this.loadingMessage = !!loadingObj.loadingMessage ? loadingObj.loadingMessage : "";
     })
   }
 

@@ -1,0 +1,16 @@
+<div class="timeline-container">
+  <div class="timeline">
+    <div *ngFor="let event of timeline" class="event">
+      <mat-icon>{{event.icon}}</mat-icon>
+      <span class="event-time">{{event.time}}</span>
+      <span class="event-text">{{event.place}}</span>
+      <div class="line"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <div class="flex flex-col justify-between">
+    <p class="font-bold text-blue-700">5 hr 0 min</p>
+    <app-button [label]="'Book'" (click)="onBook()" [class]="'w-full round rounded-full bg-border'">
+    </app-button>
+  </div>
+</div>
