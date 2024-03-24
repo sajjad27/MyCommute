@@ -35,6 +35,10 @@ import { MatInputModule } from "@angular/material/input";
 import { BookResultComponent } from './components/book/book-result/book-result.component';
 import { BookSearchComponent } from './components/book/book-search/book-search.component';
 import { BookCardComponent } from './components/book/book-result/book-card/book-card.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogComponent } from './components/dialog/dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -55,6 +59,8 @@ import { BookCardComponent } from './components/book/book-result/book-card/book-
     BookResultComponent,
     BookSearchComponent,
     BookCardComponent,
+    ModalComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -75,6 +81,7 @@ import { BookCardComponent } from './components/book/book-result/book-card/book-
     MatNativeDateModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatDialogModule
 
   ],
   providers: [],

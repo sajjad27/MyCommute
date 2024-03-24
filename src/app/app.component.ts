@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { ScreenService } from './services/screen-service';
+import { ModalService } from './components/modal/modal.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { ScreenService } from './services/screen-service';
 export class AppComponent {
 
 
-  constructor(private screenService: ScreenService) {
+  constructor(private screenService: ScreenService, private modalService: ModalService) {
   }
 
 
@@ -22,6 +23,9 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.screenService.dispatchNewScreenSize(window.innerWidth)
+    this.modalService.modalConfigModel.subscribe(() => {
+      // this.showModal = true
+    })
 
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatChipOption } from '@angular/material/chips';
+import { BlockUiService } from 'src/app/services/block-ui.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,8 @@ import { MatChipOption } from '@angular/material/chips';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
+
+  constructor(private blockUiService: BlockUiService){}
 
   requests = [
     { building: 'Yanbu Refinery', status: 'Confirmed', time: 'Nov 23 1:00 pm' },
@@ -28,7 +31,16 @@ export class HomeComponent implements OnInit{
   selectedStatus: string = 'All';
 
   applyFilter(event: any) {
-    console.log(`this.selectedStatus`, this.selectedStatus);
+    this.blockUiService.block()
+    setTimeout(() => {
+      this.blockUiService.unblock();
+      this.filter(event)
+    }, 200);
+
+    
+  }
+
+  filter(event: any){
     const selectedStatus = event.source.value;
     this.selectedStatus = selectedStatus;
 

@@ -11,7 +11,7 @@ export class BlockUiService {
   isBlocking = new Subject<{isBlocking: boolean, loadingMessage?: string}>();
 
   block() {
-    this.isBlocking.next({isBlocking: true, loadingMessage: "Loading"});
+    this.isBlocking.next({isBlocking: true});
   }
 
   blockWithMessage(message: string) {

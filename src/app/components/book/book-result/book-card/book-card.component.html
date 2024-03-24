@@ -9,8 +9,8 @@
     </div>
   </div>
   <div class="flex flex-col justify-between">
-    <p class="font-bold text-blue-700">5 hr 0 min</p>
-    <app-button [label]="'Book'" (click)="onBook()" [class]="'w-full round rounded-full bg-border'">
+    <p class="font-bold text-blue-700">{{time}}</p>
+    <app-button [label]="'Book'" (click)="openDialog()" [class]="'w-full round rounded-full bg-border'">
     </app-button>
   </div>
 </div>

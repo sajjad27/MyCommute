@@ -1,0 +1,30 @@
+<!-- the whole modal -->
+<div *ngIf="showModal" class="fixed inset-0 z-50 justify-center items-center flex">
+  <!-- backdrop -->
+  <div class="opacity-25 fixed inset-0 bg-black" (click)="closeModal()" ></div>
+  <!-- white container -->
+  <div class="relative w-auto my-6 mx-auto max-w-sm">
+    <!-- check circle icon -->
+    <div
+      class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none justify-center items-center pt-24 text-center" style="min-width: 18rem;">
+      <i class="fa fa-check-circle bg-white text-emerald-500"
+        style="position: absolute; top: 0;left: 0;right: 0;bottom: 0; height: 100px; width: 100px;transform: translate(-50%, -50%); margin: 0% 50%;font-size: 130px;border-radius: 50%;display: flex;align-items: center; justify-content: center;font-weight: 100; padding: 20%;"></i>
+
+      <!-- title -->
+      <h3 class="text-3xl font-semibold">
+        {{config?.title}}
+      </h3>
+
+      <!-- message -->
+      <p class="my-4 text-blueGray-500 text-lg leading-relaxed w-3/4">
+        {{config?.message}}
+      </p>
+      <!--footer-->
+      <button
+        class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150 w-full"
+        type="button" (click)="closeModal()" #btn>
+        OK
+      </button>
+    </div>
+  </div>
+</div>
